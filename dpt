@@ -4,14 +4,18 @@
 
 import sys
 
-before = 0
+try:
+    line = input()
+    before = float(line)
+except ValueError:
+    print("int error!")
 now = 0
 deltax = 0
 for line in sys.stdin:
     try: 
         now = float(line)
-        deltax = now - before
+        deltax = float(now - before)
         print(deltax)
-        before = float(line)
+        before = now
     except ValueError:
         print("stdin error!")
