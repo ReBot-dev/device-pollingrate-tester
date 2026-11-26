@@ -8,11 +8,10 @@ try:
     line = input()
     before = float(line)
 except ValueError:
-    print("Value error!")
+    print("Value error!", file=sys.stderr)
     sys.exit(3)
 except EOFError:
-    msg = stdrr
-    print("EOF error! :%s", msg)
+    print("EOF error!", file=sys.stderr)
     sys.exit(4)
 
 for line in sys.stdin:
@@ -22,6 +21,6 @@ for line in sys.stdin:
         print(deltax)
         before = now
     except ValueError:
-        print("Value error!")
+        print("Value error!", file=sys.stderr)
         sys.exit(3)
 
