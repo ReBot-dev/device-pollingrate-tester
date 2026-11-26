@@ -2,7 +2,7 @@
 
 ![test](https://github.com/ReBot-dev/device-pollingrate-tester/actions/workflows/test.yml/badge.svg)
 
-**[日本語](#日本語)** | **[English](#english)**
+**[日本語](#日本語)** | **[English](#english) (AI)**
 
 ---
 
