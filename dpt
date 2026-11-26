@@ -8,9 +8,12 @@ try:
     line = input()
     before = float(line)
 except ValueError:
-    print("int error!")
-now = 0
-deltax = 0
+    print("Value error!")
+    sys.exit()
+except EOFError:
+    print("%s", stderr)
+    sys.exit()
+
 for line in sys.stdin:
     try: 
         now = float(line)
@@ -18,4 +21,6 @@ for line in sys.stdin:
         print(deltax)
         before = now
     except ValueError:
-        print("stdin error!")
+        print("Value error!")
+        sys.exit()
+
