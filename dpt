@@ -9,10 +9,11 @@ try:
     before = float(line)
 except ValueError:
     print("Value error!")
-    sys.exit()
+    sys.exit(3)
 except EOFError:
-    print("%s", stderr)
-    sys.exit()
+    msg = stdrr
+    print("EOF error! :%s", msg)
+    sys.exit(4)
 
 for line in sys.stdin:
     try: 
@@ -22,5 +23,5 @@ for line in sys.stdin:
         before = now
     except ValueError:
         print("Value error!")
-        sys.exit()
+        sys.exit(3)
 
